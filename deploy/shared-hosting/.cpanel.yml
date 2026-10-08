@@ -1,0 +1,9 @@
+---
+# cPanel deploy hook. Run composer install and `npm run build` before pushing;
+# the host often lacks Composer and Node.
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/$USER/convene-api
+    - /bin/cp -R apps/api/. $DEPLOYPATH
+    - /bin/cp -R apps/web/dist/. /home/$USER/public_html
+    - echo "Deployed. Run migrations manually per deploy/shared-hosting/README.md step 6 if this release includes new migrations."

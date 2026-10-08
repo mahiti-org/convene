@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build output
+dist/
+build/
+apps/api/public/build/
+
+# Env files (per-instance secrets, never commit)
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Laravel
+apps/api/storage/*.key
+apps/api/storage/logs/*
+apps/api/storage/framework/cache/*
+apps/api/storage/framework/sessions/*
+apps/api/storage/framework/views/*
+apps/api/bootstrap/cache/*.php
+apps/api/public/hot
+
+# React Native
+apps/mobile/android/app/build/
+apps/mobile/ios/build/
+apps/mobile/ios/Pods/
+*.keystore
+!debug.keystore
+apps/mobile/android/.gradle/
+apps/mobile/android/local.properties
+
+# Editor/OS
+.DS_Store
+.vscode/
+.idea/
+Thumbs.db
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Caches
+.phpunit.result.cache
+.eslintcache
